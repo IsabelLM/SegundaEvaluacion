@@ -11,13 +11,33 @@ package iescomercio.tema6.gestiondelpersonal;
  */
 public abstract class Empleado {
 
-    private String nif, Nombre;
+    private String nif, nombre;
     private byte edad;
     public static final float SALARIO_MINIMO = 645;
 
+    public Empleado(String nif, String nombre, byte edad) {
+        this.nif = nif;
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    
+    
     @Override
     public String toString() {
-        return "Empleado{" + "nif=" + nif + ", Nombre=" + Nombre + ", edad=" + edad + '}';
+        return "Empleado{" + "nif=" + nif + ", Nombre=" + nombre + ", edad=" + edad + '}';
+    }
+
+    public void setNif(String nif) {
+        this.nif = nif;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEdad(byte edad) {
+        this.edad = edad;
     }
 
     public abstract float calculaSueldo();

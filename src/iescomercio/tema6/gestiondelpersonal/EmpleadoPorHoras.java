@@ -11,15 +11,14 @@ package iescomercio.tema6.gestiondelpersonal;
  */
 public class EmpleadoPorHoras extends Empleado {
 
-    private String nif, Nombre;
+    private String nif, nombre;
     private byte edad;
     private int horasMes;
     private float precioHora;
 
-    public EmpleadoPorHoras(String nif, String Nombre, byte edad, int horasMes, float precioHora) {
-        this.nif = nif;
-        this.Nombre = Nombre;
-        this.edad = edad;
+    public EmpleadoPorHoras(String nif, String nombre, byte edad, int horasMes, float precioHora) {
+        super(nif, nombre, edad);
+
         this.horasMes = horasMes;
         this.precioHora = precioHora;
     }
@@ -29,12 +28,11 @@ public class EmpleadoPorHoras extends Empleado {
         this.horasMes = horasMes;
     }
 
-    
     @Override
     public float calculaSueldo() {
         float salario;
         salario = (precioHora * horasMes) + SALARIO_MINIMO;
-        return salario; 
+        return salario;
     }
 
 }

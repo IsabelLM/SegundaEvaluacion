@@ -5,6 +5,7 @@
  */
 package iescomercio.tema6.gestiondelpersonal;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
@@ -13,30 +14,45 @@ import java.util.GregorianCalendar;
  */
 public class EmpleadoFijo extends Empleado {
 
-    private String nif, Nombre;
+    private String nif, nombre;
     private byte edad;
-    private int complemento;
-    private GregorianCalendar añoAlta, añoActual;
+    private int complemento, añoIngreso, añoActual;
+    //private GregorianCalendar añoAlta, añoActual;
 
-    public EmpleadoFijo(String nif, String Nombre, byte edad, int complemento, int diaAlta, int mesAlta, int añoAlta, int diaActual, int mesActual, int añoActual) {
-        this.nif = nif;
-        this.Nombre = Nombre;
-        this.edad = edad;
+    public EmpleadoFijo(String nif, String nombre, byte edad, int complemento) {
+        super(nif, nombre, edad);
         this.complemento = complemento;
-        this.añoAlta = new GregorianCalendar(diaAlta, mesAlta, añoAlta);
-        this.añoActual = new GregorianCalendar(diaActual, mesActual, añoActual);
+        Calendar today = Calendar.getInstance();
+        this.añoIngreso = today.getTime().getYear() + 1900;
+    }
+
+    public int getAñoIngreso() {
+        return añoIngreso;
+    }
+
+    public int getAñoActual() {
+        return añoActual;
     }
 
     public void setComplemento(int complemento) {
         this.complemento = complemento;
     }
 
-    //Falta método para saber cuántos años de antigüedad tiene.
-    
+    public int getComplemento() {
+        return complemento;
+    }
+
     @Override
     public float calculaSueldo() {
+        int diferenciaAños;
         float salario;
-        salario = SALARIO_MINIMO + (complemento); //falta saber los años 
+
+        Calendar aux = Calendar.getInstance();
+
+        añoActual = aux.getTime().getYear() + 1900;
+        diferenciaAños = getAñoIngreso() - getAñoActual();
+
+        salario = SALARIO_MINIMO + (complemento * diferenciaAños);
 
         return salario;
     }

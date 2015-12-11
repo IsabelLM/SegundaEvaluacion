@@ -18,11 +18,12 @@ public class HombreDelTiempo {
         int dia, mes, año, temperatura, contadorEnero = 0, contadorFebrero = 0, contadorMarzo = 0,
                 contadorAbril = 0, contadorMayo = 0, contadorJunio = 0, contadorJulio = 0, contadorAgosto = 0,
                 contadorSeptiembre = 0, contadorOctubre = 0, contadorNoviembre = 0, contadorDiciembre = 0;
-                
+
         float mediaEnero = 0, mediaFebrero = 0, mediaMarzo = 0,
                 mediaAbril = 0, mediaMayo = 0, mediaJunio = 0, mediaJulio = 0, mediaAgosto = 0, mediaSeptiembre = 0,
                 mediaOctubre = 0, mediaNoviembre = 0, mediaDiciembre = 0;
 
+        //pide los datos 10 veces
         for (int i = 0; i < 10; i++) {
             do {
                 System.out.println("Introduce día, més, año y temperatura");
@@ -94,7 +95,7 @@ public class HombreDelTiempo {
         mediaJulio = mediaJulio / contadorJulio;
         mediaAgosto = mediaAgosto / contadorJulio;
         mediaSeptiembre = mediaSeptiembre / contadorSeptiembre;
-        mediaOctubre = mediaOctubre / contadorSeptiembre;
+        mediaOctubre = mediaOctubre / contadorOctubre;
         mediaNoviembre = mediaNoviembre / contadorNoviembre;
         mediaDiciembre = mediaDiciembre / contadorDiciembre;
 
