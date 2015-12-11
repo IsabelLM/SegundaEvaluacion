@@ -7,7 +7,7 @@ package iescomercio.tema6.gestiondelpersonal;
 
 /**
  *
- * @author VESPERTINO
+ * @author VESPERO
  */
 public abstract class Empleado {
 
