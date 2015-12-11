@@ -13,11 +13,28 @@ public class EmpleadoPorHoras extends Empleado {
 
     private String nif, Nombre;
     private byte edad;
+    private int horasMes;
     private float precioHora;
 
+    public EmpleadoPorHoras(String nif, String Nombre, byte edad, int horasMes, float precioHora) {
+        this.nif = nif;
+        this.Nombre = Nombre;
+        this.edad = edad;
+        this.horasMes = horasMes;
+        this.precioHora = precioHora;
+    }
+
+    //Las horas del mes se pueden cambiar.
+    public void setHorasMes(int horasMes) {
+        this.horasMes = horasMes;
+    }
+
+    
     @Override
     public float calculaSueldo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        float salario;
+        salario = (precioHora * horasMes) + SALARIO_MINIMO;
+        return salario; 
     }
 
 }
