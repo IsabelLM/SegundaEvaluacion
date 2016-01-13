@@ -15,9 +15,9 @@ public class StringTest {
         {
 
 //            System.out.println("Respuesta: " + StringII.esPalindromo("pepito") );
-            System.out.println("Respuesta: " + StringII.contraseña("papepipopu") );
-            System.out.println("Respuesta: " + StringII.esPalindromo("ossads") );
-
+//            System.out.println("Respuesta: " + StringII.contraseña("papepipopu") );
+//            System.out.println("Respuesta: " + StringII.esPalindromo("ossads") );
+            StringII.desordenar("151532");
 //
 //            String s1 = new String();
 //

@@ -42,24 +42,18 @@ public class StringII {
         s = s.replace('o', '0');
         s = s.replaceAll("u", "\\");
 
-//        String aux = "";
-//        s = s.toLowerCase();    
-//
-//        for (int inicio = 0; inicio < s.length(); inicio++) {
-//            switch (s.charAt(inicio)) {
-//                case 'a':
-//                    s = s.replace('a', '@');
-//                case 'e':
-//                    s = s.replace('e', '3');
-//                case 'i':
-//                    s = s.replace('i', '1');
-//                case 'o':
-//                    s = s.replace('i', '1');
-//                case 'u':
-//                    s = s.replace('u', '\\');
-//            }
-//            aux = aux + s.charAt(inicio);
-//        }
         return s;
+    }
+
+    public static void desordenar(String s) {
+
+        if (s.charAt(0) == '-') {
+            System.out.println("El numero es negativo");
+        } else if ((s.length()) % 2 != 0) {
+            System.out.println("Tiene que ser par");
+        } else {
+            
+        }
+
     }
 }
