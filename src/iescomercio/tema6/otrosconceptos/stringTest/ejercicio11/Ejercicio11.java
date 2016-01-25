@@ -16,6 +16,7 @@ package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
 public class Ejercicio11 {
 
     public static String ejercicio(String s1) {
+        String s = "\n";
         StringBuilder par = new StringBuilder();
         StringBuilder impar = new StringBuilder();
 
@@ -28,7 +29,6 @@ public class Ejercicio11 {
             }
         }
         //Se devuelven dos Strings.
-        //Se muestran seguidos en una misma línea, 1º los pares y luego los impares.
-        return par.toString() + impar.toString();
+        return par.toString() + s + impar.toString();
     }
 }
