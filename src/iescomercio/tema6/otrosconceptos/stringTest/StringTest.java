@@ -13,6 +13,7 @@ public class StringTest {
 
     public static void main(String[] args) {
         {
+            
 //            System.out.println("Respuesta: " + StringII.esPalindromo("pepito") );
 //            System.out.println("Respuesta: " + StringII.contraseña("papepipopu") );
 //            System.out.println("Respuesta: " + StringII.esPalindromo("ossads") );
@@ -21,7 +22,9 @@ public class StringTest {
 //            System.out.println(StringII.ejercicio6("51", "11254"));
 //            System.out.println(StringII.ejercicio6("555", "-55"));
             
-            System.out.println(StringII.ejercicio7("111222", "333444"));
+//            System.out.println(StringII.ejercicio7("111222", "333444"));
+            
+            System.out.println(StringII.ejercicio9(5));
         }
     }
 }

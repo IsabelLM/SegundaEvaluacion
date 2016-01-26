@@ -5,6 +5,8 @@
  */
 package iescomercio.tema6.otrosconceptos.stringTest;
 
+import iescomercio.tema4.aleatorio.Aleatorio;
+
 /**
  *
  * @author VESPERTINO
@@ -117,12 +119,87 @@ public class StringII {
                 return null;
             }
         }
-        for (int i = 0; i < s1.length(); i = i+2) {
-               
-            }
+        for (int i = 0; i < s1.length(); i = i + 2) {
+            //sin terminar
+        }
 
-        
         return sb.toString();
 
     }
+
+    public static String ejercicio8(int n, int m) {
+//        int bucle, anado;
+//        StringBuilder destino = new StringBuilder("");
+//        StringBuilder origen;
+//        Aleatorio s = new Aleatorio(0, 10);
+//
+//        long numeroAleatorio;
+//
+//        // Comprobamos entrada
+//        if (n < 0 || m < 0) {
+//            System.out.println("No se permiten numeros negativos");
+//            return null;
+//        }
+//        if (m > 9) {
+//            System.out.println("M no puede ser mayor de 9");
+//            return null;
+//        }
+//        // Rellenar el String con numeros aleatorios        
+//        //origen = new StringBuilder(s.muestraVariosAleatorios(10));
+//
+//        // Primera parte
+//        for (int i = 0; i <= m; i++) {
+//            destino.append(origen.charAt(i));
+//        }
+//        // Segunda parte
+//        for (int i = 0; i < n; i++) {
+//            destino.append('*');
+//        }
+//        // tercera parte
+//        for (int i = m + 1; i < origen.length(); i++) {
+//            destino.append(origen.charAt(i));
+//        }
+//        return destino.toString();
+        return null;
+    }
+
+    public static String ejercicio9(int n) {
+        StringBuilder origen = new StringBuilder("");
+
+        if (n < 0 || n > 9) {
+            System.out.println("No se permiten numeros negativos");
+            return null;
+        }
+
+        for (int i = 0; i < 10; i++) {
+            origen.append(i);
+            if (i == n) {
+                origen.append(n);
+            }
+
+        }
+        return origen.toString();
+    }
+
+    public static String ejercicio10(int n) {
+        StringBuilder cadena = new StringBuilder();
+        StringBuilder numero = new StringBuilder();
+        String aux, aux2;
+
+        numero.append(n);
+        String nS = numero.toString();
+
+        if (n < 0 || n > 9) {
+            System.out.println("No se permiten numeros negativos");
+            return null;
+        }
+
+        for (int i = 1; i <= 100; i++) {
+            cadena.append(i);
+        }
+        aux = cadena.toString();
+        aux2 = aux.replaceAll(nS, "");
+        return aux2;
+    }
+
 }
