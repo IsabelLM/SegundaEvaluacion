@@ -7,7 +7,7 @@ package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
 
 /**
  *
- * @author Isabel
+ * @author VESPERTINO
  */
 
 /*11.Realizar un método que recibe un String con números pares e impares 
@@ -15,20 +15,19 @@ package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
  y los impares por otro.*/
 public class Ejercicio11 {
 
-    public static String ejercicio(String s1) {
-        String s = "\n";
+    public static DosString ejercicio(String s1) {
         StringBuilder par = new StringBuilder();
         StringBuilder impar = new StringBuilder();
+        String s = "\n";
 
-        //Comprueba si un numero es par o impar
+        //Comprueba si un número es par o impar y lo va añadiendo
         for (int i = 0; i < s1.length(); i++) {
             if (s1.charAt(i) % 2 == 0) {
-                par.append(s1.charAt(i));
+                par.append(s1.charAt(i)); 
             } else {
                 impar.append(s1.charAt(i));
             }
         }
-        //Se devuelven dos Strings.
         return par.toString() + s + impar.toString();
     }
 }

@@ -9,10 +9,6 @@ package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
  *
  * @author VESPERTINO
  */
-public class Run {
-
-    public static void main(String[] args) {
-        System.out.println(Ejercicio11.ejercicio("0213548554"));
-
-    }
+public class DosString {
+    
 }
