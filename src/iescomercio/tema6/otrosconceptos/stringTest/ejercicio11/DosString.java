@@ -10,5 +10,32 @@ package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
  * @author VESPERTINO
  */
 public class DosString {
-    
+
+    private StringBuilder par = new StringBuilder();
+    private StringBuilder impar = new StringBuilder();
+
+    public DosString() {
+    }
+
+    public StringBuilder getPar() {
+        return par;
+    }
+
+    public void setPar(StringBuilder par) {
+        this.par = par;
+    }
+
+    public StringBuilder getImpar() {
+        return impar;
+    }
+
+    public void setImpar(StringBuilder impar) {
+        this.impar = impar;
+    }
+
+    @Override
+    public String toString() {
+        return "par: " + par.toString() + "\nimpar: " + impar.toString();
+    }
+
 }

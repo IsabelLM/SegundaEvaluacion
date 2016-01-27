@@ -12,7 +12,7 @@ import iescomercio.tema4.aleatorio.Aleatorio;
  * @author VESPERTINO
  */
 public class Ejercicio {
-    public static Datos sumaMedia(String s){
-
-    }
+//    public static Datos sumaMedia(String s){
+//        Datos d = new Datos(suma, media);
+//    }
 }

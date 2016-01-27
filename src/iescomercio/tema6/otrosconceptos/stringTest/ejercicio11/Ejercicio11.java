@@ -5,6 +5,8 @@
  */
 package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
 
+import iescomercio.utilidades.Utilidades;
+
 /**
  *
  * @author VESPERTINO
@@ -16,18 +18,23 @@ package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
 public class Ejercicio11 {
 
     public static DosString ejercicio(String s1) {
-        StringBuilder par = new StringBuilder();
-        StringBuilder impar = new StringBuilder();
-        String s = "\n";
+        DosString ds = new DosString();
 
-        //Comprueba si un número es par o impar y lo va añadiendo
+        //Comprobar si es un numero positivo o 0.
         for (int i = 0; i < s1.length(); i++) {
-            if (s1.charAt(i) % 2 == 0) {
-                par.append(s1.charAt(i)); 
-            } else {
-                impar.append(s1.charAt(i));
+            if (s1.charAt(i) < '0' || s1.charAt(i) > '9') {
+                System.out.println("Solo se permiten numeros enteros o el cero.");
+                return null;
             }
         }
-        return par.toString() + s + impar.toString();
+        //Comprueba si un número es par o impar y lo va metiendo a dónde corresponde
+        for (int i = 0; i < s1.length(); i++) {
+            if (s1.charAt(i) % 2 == 0) {
+                ds.setPar(ds.getPar().append(s1.charAt(i)));
+            } else {
+                ds.setImpar(ds.getImpar().append(s1.charAt(i)));
+            }
+        }
+        return ds;
     }
 }
