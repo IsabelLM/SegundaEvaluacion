@@ -5,8 +5,6 @@
  */
 package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
 
-import iescomercio.utilidades.Utilidades;
-
 /**
  *
  * @author VESPERTINO
@@ -17,24 +15,33 @@ import iescomercio.utilidades.Utilidades;
  y los impares por otro.*/
 public class Ejercicio11 {
 
+    public static boolean compruebaNumeros(String s) {
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) < '0' || s.charAt(i) > '9') {
+                System.out.println("Solo se permiten numeros enteros o el cero.");
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static DosString ejercicio(String s1) {
         DosString ds = new DosString();
 
-        //Comprobar si es un numero positivo o 0.
-        for (int i = 0; i < s1.length(); i++) {
-            if (s1.charAt(i) < '0' || s1.charAt(i) > '9') {
-                System.out.println("Solo se permiten numeros enteros o el cero.");
-                return null;
+        //Comprueba si es un numero positivo o 0.
+        if (compruebaNumeros(s1)) {
+            //Comprueba si cada número es par o impar y lo va metiendo a donde corresponde
+            for (int i = 0; i < s1.length(); i++) {
+                if (s1.charAt(i) % 2 == 0) {
+                    ds.setPar(ds.getPar().append(s1.charAt(i)));
+                } else {
+                    ds.setImpar(ds.getImpar().append(s1.charAt(i)));
+                }
             }
+            return ds;
+        } else {
+            return null;
         }
-        //Comprueba si un número es par o impar y lo va metiendo a dónde corresponde
-        for (int i = 0; i < s1.length(); i++) {
-            if (s1.charAt(i) % 2 == 0) {
-                ds.setPar(ds.getPar().append(s1.charAt(i)));
-            } else {
-                ds.setImpar(ds.getImpar().append(s1.charAt(i)));
-            }
-        }
-        return ds;
+
     }
 }

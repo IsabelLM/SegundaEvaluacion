@@ -10,5 +10,7 @@ package iescomercio.tema6.otrosejercicios.ejercicio4;
  * @author VESPERTINO
  */
 public class Run {
-    
+    public static void main(String[] args) {
+        System.out.println(Ejercicio.sumaMedia("123456789"));
+    }
 }

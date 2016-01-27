@@ -11,10 +11,12 @@ package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
  */
 public class DosString {
 
-    private StringBuilder par = new StringBuilder();
-    private StringBuilder impar = new StringBuilder();
+    private StringBuilder par;
+    private StringBuilder impar;
 
     public DosString() {
+        par = new StringBuilder();
+        impar = new StringBuilder();;
     }
 
     public StringBuilder getPar() {
@@ -35,7 +37,6 @@ public class DosString {
 
     @Override
     public String toString() {
-        return "par: " + par.toString() + "\nimpar: " + impar.toString();
+        return "par: " + par + "\nimpar: " + impar.toString();
     }
-
 }

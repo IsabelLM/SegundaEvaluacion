@@ -12,7 +12,9 @@ package iescomercio.tema6.otrosconceptos.stringTest.ejercicio11;
 public class Run {
 
     public static void main(String[] args) {
-        System.out.println("Prueba 1:\n" +Ejercicio11.ejercicio("123456789"));
+        // Caso 1 buena
+        System.out.println("Prueba 1:\n" +Ejercicio11.ejercicio("123456789").toString());
+        // Caso 2 malo
         System.out.println("Prueba 2: " +Ejercicio11.ejercicio("26-52147"));
     }
 }

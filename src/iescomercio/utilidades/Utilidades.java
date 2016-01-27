@@ -11,16 +11,15 @@ package iescomercio.utilidades;
  */
 public class Utilidades {
 
-    public static String comprobarSiEsPositivo(String s) {
+    public static boolean compruebaNumerosEnterosCero(String s) {
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) < '0' || s.charAt(i) > '9') {
                 System.out.println("Solo se permiten numeros enteros o el cero.");
-                return null;
-
+                return false;
             }
         }
-        return null;
+        return true;
     }
     
-}
 
+}

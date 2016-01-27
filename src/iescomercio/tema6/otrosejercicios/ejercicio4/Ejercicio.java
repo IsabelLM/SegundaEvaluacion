@@ -12,7 +12,15 @@ import iescomercio.tema4.aleatorio.Aleatorio;
  * @author VESPERTINO
  */
 public class Ejercicio {
-//    public static Datos sumaMedia(String s){
-//        Datos d = new Datos(suma, media);
-//    }
+    public static Datos sumaMedia(String s){
+        Datos d;
+        int suma= 0, media = 0, contador = 0;
+        for (int i = 0; i < s.length(); i++) {
+            suma += Character.getNumericValue(s.charAt(i));
+            contador ++;
+        }
+        media = suma / contador;
+        d = new Datos(suma, media);
+        return d;
+    }
 }
