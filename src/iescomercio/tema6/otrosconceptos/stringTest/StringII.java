@@ -202,4 +202,40 @@ public class StringII {
         return aux2;
     }
 
+    public static String ejercio12(String a, String b) {
+        StringBuilder sb = new StringBuilder();
+        String min;
+
+        if (a.length() < b.length()) {
+            min = a;
+        } else {
+            min = b;
+        }
+
+        //"135", "024789" 
+        for (int i = 0; i < min.length(); i++) {
+            if (min.charAt(i) < b.charAt(i)) {
+                sb.append(min.charAt(i));
+                for (int j = 0; j < min.length(); j++) {
+                    if(min.charAt(j) < b.charAt(i)){
+                        sb.append(min.charAt(j));
+                    }
+                    
+                }
+                
+            }else if(min.charAt(i) == b.charAt(i)){
+                sb.append(min.charAt(i));
+                sb.append(b.charAt(i));
+            } else if (b.charAt(i) < min.charAt(i)) {
+                sb.append(b.charAt(i));
+            } else {
+                sb.append(b.substring(i, b.length()));
+            }
+        }
+        
+       
+        
+        return sb.toString();
+    }
+
 }
