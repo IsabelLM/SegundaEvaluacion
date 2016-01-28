@@ -225,11 +225,12 @@ public class StringII {
                 
             }else if(min.charAt(i) == b.charAt(i)){
                 sb.append(min.charAt(i));
+                
                 sb.append(b.charAt(i));
             } else if (b.charAt(i) < min.charAt(i)) {
                 sb.append(b.charAt(i));
             } else {
-                sb.append(b.substring(i, b.length()));
+                sb.append(b.substring(i));
             }
         }
         
@@ -237,5 +238,7 @@ public class StringII {
         
         return sb.toString();
     }
+    
+    
 
 }
