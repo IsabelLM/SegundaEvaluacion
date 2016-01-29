@@ -202,43 +202,29 @@ public class StringII {
         return aux2;
     }
 
-    public static String ejercio12(String a, String b) {
+    public static String ejercicio12(String s1, String s2) {
         StringBuilder sb = new StringBuilder();
-        String min;
+        int indiceS1, indiceS2;
 
-        if (a.length() < b.length()) {
-            min = a;
-        } else {
-            min = b;
-        }
+        indiceS1 = indiceS2 = 0;
 
-        //"135", "024789" 
-        for (int i = 0; i < min.length(); i++) {
-            if (min.charAt(i) < b.charAt(i)) {
-                sb.append(min.charAt(i));
-                for (int j = 0; j < min.length(); j++) {
-                    if(min.charAt(j) < b.charAt(i)){
-                        sb.append(min.charAt(j));
-                    }
-                    
-                }
-                
-            }else if(min.charAt(i) == b.charAt(i)){
-                sb.append(min.charAt(i));
-                
-                sb.append(b.charAt(i));
-            } else if (b.charAt(i) < min.charAt(i)) {
-                sb.append(b.charAt(i));
+        do {
+            //Ponemos el mas pequeño de las cadenas
+            if (s1.charAt(indiceS1) < s2.charAt(indiceS2)) {
+                sb.append(s1.charAt(indiceS1));
+                indiceS1++;
             } else {
-                sb.append(b.substring(i));
+                sb.append(s2.charAt(indiceS2));
             }
+        } while (indiceS1 != s1.length() && indiceS2 != s2.length());
+        //Comprobamos cual de los dos strings ha acabado
+        if (indiceS1 == s1.length()) {
+            sb.append(s2.substring(indiceS2, s2.length()));
+        } else {
+            sb.append(s1.substring(indiceS1, s1.length()));
         }
-        
-       
-        
         return sb.toString();
     }
-    
-    
 
+    
 }

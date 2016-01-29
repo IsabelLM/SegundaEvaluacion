@@ -23,7 +23,11 @@ public class StringTest {
 //            System.out.println(StringII.ejercicio6("555", "-55"));
 //            System.out.println(StringII.ejercicio7("111222", "333444"));
 //            System.out.println(StringII.ejercicio9(5));
-            System.out.println(StringII.ejercio12("1345", "024789"));
+            String s1 = "127";
+            String s2 = "2479";
+            System.out.println("S1: " + s1);
+            System.out.println("S2: " + s2);
+            System.out.println("Resultado: " + StringII.ejercicio12(s1, s2));
         }
     }
 }
