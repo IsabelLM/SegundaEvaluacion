@@ -5,9 +5,9 @@
  */
 package iescomercio.tema6.otrosconceptos.Calendar;
 
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.StringTokenizer;
 
 /**
  *
@@ -20,5 +20,9 @@ public class Ejercicio1 {
                 + "'y son las' HH 'horas y' mm 'minutos y' s 'segundos'");
         Date date = new Date();
         System.out.println(dateFormat.format(date)); //2013/10/15 16:16:39
+        NumberFormat nf = NumberFormat.getCurrencyInstance();
+        System.out.println(nf.format(82745637));
+         
+        
     }
 }
