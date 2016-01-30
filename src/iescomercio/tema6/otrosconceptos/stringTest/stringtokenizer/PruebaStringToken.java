@@ -12,18 +12,18 @@ import java.util.StringTokenizer;
  * @author VESPERTINO
  */
 public class PruebaStringToken {
+
     public static void main(String[] args) {
-        String frase = "12:17:25";
-        String delimitador=":";
+//        String frase = "12:17:25";
+//        String delimitador = ":";
+//        StringTokenizer st = new StringTokenizer(frase, delimitador);
+//        System.out.println("Tokens: " + st.countTokens());
+//        while (st.hasMoreTokens()) {
+//            System.out.println(st.nextToken());
+//        }
+        Ejercicios.numeroDePalabras("Cuántas palabras tiene esta frase");
+        Ejercicios.numeroDeFrases("Esta es una frase. Esta es otra frase. Y esta otra frase.");
         
-        StringTokenizer st = new StringTokenizer(frase, delimitador);
-        
-        System.out.println("Tokens: "+st.countTokens());
-        
-        while(st.hasMoreTokens()) {
-            System.out.println(st.nextToken());
-        }
-            
-        
+
     }
 }
