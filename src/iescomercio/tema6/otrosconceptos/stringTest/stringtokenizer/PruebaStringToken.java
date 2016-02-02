@@ -22,7 +22,7 @@ public class PruebaStringToken {
 //            System.out.println(st.nextToken());
 //        }
         Ejercicios.numeroDePalabras("Cuántas palabras tiene esta frase");
-        Ejercicios.numeroDeFrases("Esta es una frase. Esta es otra frase. Y esta otra frase.");
+        Ejercicios.numeroDeFrases("Una frase. Dos frases. Tres frases.");
         
 
     }

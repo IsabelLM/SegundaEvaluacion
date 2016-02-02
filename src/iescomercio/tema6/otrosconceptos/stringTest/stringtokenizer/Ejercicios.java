@@ -21,11 +21,12 @@ public class Ejercicios {
         System.out.println(st.countTokens());
     }
 
-//Otro método que calcule y muestre por pantalla el numero de frases.
+//Otro método que  calcule y muestre por pantalla el numero de frases.
     public static void numeroDeFrases(String n) {
         String delimitador = ".";
 
         StringTokenizer st = new StringTokenizer(n, delimitador);
+        
         System.out.println(st.countTokens());
     }
 }
