@@ -5,18 +5,20 @@
  */
 package iescomercio.tema7.arrays.ejerciciosSueltos;
 
+import iescomercio.utilidadesArray.UtilidadesArray;
+
 /**
  *
  * @author VESPERTINO
  */
 
-/*Realizar un programa que calcule y guarde en un array de tamaño 6, 6 numeros 
-aleatorios de la primitiva(1-49)(comprobar si hay repetido)
-Posteriormente pide 6 numeros al usuario, diferentes, en un array
-averiguará cuántos números ha acertado el usuario. */
+/*Realizar un metodo que reciba un vector y retorne dicho vector ordenado. Utilizando los metodos ya creados calculaMax y calculaMin*/
+public class Ejercicio4 {
 
-
-public class Ejercicio3 {
     public static void main(String[] args) {
+        float[] datos = new float[10];
+        UtilidadesArray.rellenaArrayConAleatorios(datos, 1, 30);
+
     }
+
 }
