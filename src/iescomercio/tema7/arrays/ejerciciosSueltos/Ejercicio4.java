@@ -17,15 +17,20 @@ import java.util.Arrays;
 public class Ejercicio4 {
 
     public static void main(String[] args) {
-        float[] datos = new float[10];
+        float[] datos = {10, 1, 8, 7, 6, 5, 4, 3, 2, 3};
         float[] aux = new float[10];
-        UtilidadesArray.rellenaArrayConAleatorios(datos, 1, 20);
+        float indice = 0;
+        //UtilidadesArray.rellenaArrayConAleatorios(datos, 1, 30);
+
+        System.out.println("Sin ordenar: " + Arrays.toString(datos));
 
         for (int i = 0; i < datos.length; i++) {
-
-            aux[i] +=  UtilidadesArray.calcularMinimo(datos);
-            UtilidadesArray.borrar(datos, i);
+            aux[i] += UtilidadesArray.calcularMinimo(datos);
+            UtilidadesArray.borrar(datos, UtilidadesArray.calculaIndiceMinimo(datos));
         }
-        System.out.println(Arrays.toString(aux));
+        System.out.println("Indice minimo: "+UtilidadesArray.calculaIndiceMinimo(datos));
+        System.out.println("Array original: " + Arrays.toString(datos));
+        System.out.println("Ordenados: " + Arrays.toString(aux));
+
     }
 }
