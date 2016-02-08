@@ -59,7 +59,6 @@ public class UtilidadesArray {
     }
 
     //calcula el numero minimo de un array
-
     public static double calcularMinimo(float[] datos) {
         float min = Float.MAX_VALUE;
         for (float i : datos) {
@@ -135,6 +134,15 @@ public class UtilidadesArray {
         } while (salir != false);
 
         return fin;
+    }
+
+//Generar numero aleatorio en array multidimensional
+    
+    public static void rellenaArrayConAleatorios(float[][] datos, float inicio, float fin) {
+        Random r = new Random();
+        for (int i = 0; i < datos.length; i++) {
+            datos[i][i] = (float) Math.floor(Math.random() * (fin - inicio + 1) + inicio);
+        }
     }
 
 }
