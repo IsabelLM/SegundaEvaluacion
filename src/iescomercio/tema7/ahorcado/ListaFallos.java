@@ -10,5 +10,22 @@ package iescomercio.tema7.ahorcado;
  * @author VESPERTINO
  */
 class ListaFallos {
+     private StringBuilder lista;
+
+    public ListaFallos(StringBuilder lista) {
+        this.lista = lista;
+    }
+
+    public StringBuilder getLista() {
+        return lista;
+    }
+
+    public void setLista(StringBuilder lista) {
+        this.lista = lista;
+    }
     
+    public void aumentarFallo(){
+        int errores;
+        
+    }
 }

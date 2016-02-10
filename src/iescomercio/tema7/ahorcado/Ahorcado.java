@@ -10,24 +10,25 @@ package iescomercio.tema7.ahorcado;
  * @author VESPERTINO
  */
 public class Ahorcado {
-    public void jugar(){
-       Jugador jugador=new Jugador(null);
-       Palabra palabra=new Palabra(null);
-       Horca horca=new Horca();
-       Ahorcado ahoracado=new Ahorcado();
-       ListaFallos listaFallos=new ListaFallos(null);
-       
-       jugador.pedirNombre();
-       palabra.getPalabraEscondida();
-       horca.getNumeroFallos();
-       horca.getNumeroMaximo();
-       listaFallos.getLista();
-        do {            
+
+    public void jugar() {
+        Jugador jugador = new Jugador(null);
+        Palabra palabra = new Palabra(null);
+        Horca horca = new Horca();
+        Ahorcado miAhorcado = new Ahorcado();
+        ListaFallos listaFallos = new ListaFallos(null);
+
+        jugador.pedirNombre();
+        palabra.getPalabraEscondida();
+        horca.getNumeroFallos();
+        horca.getNumeroMaximo();
+        listaFallos.getLista();
+        do {
             jugador.pedirLetra(); //Tengo que limitar la entrada de un solo caracter etc...
-           // palabra.comprobarLetra(jugador.getLetra());
-            
+            // palabra.comprobarLetra(jugador.getLetra());
+
         } while (true);
-       
+
         //do {            
         //pedir nombre al Jugador
         //palabra.mostrar();
@@ -39,8 +40,5 @@ public class Ahorcado {
         // lista.metePlabra
         //}
         //} while (horca.noEstasMuerto or Palabra.noCompleta);
-
-        
-        
     }
 }
