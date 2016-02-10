@@ -18,8 +18,8 @@ class Palabra {
         this.palabra = palabra;
         StringBuilder cadenaAux = new StringBuilder(palabra);
         for (int i = 0; i < palabra.length(); i++) {
-            cadenaAux.setCharAt(i, ' ');
-            cadenaAux.setCharAt(i, '-');
+            cadenaAux.append(' ');
+            cadenaAux.append('-');
         }
 
     }
