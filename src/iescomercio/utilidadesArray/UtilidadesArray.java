@@ -85,11 +85,11 @@ public class UtilidadesArray {
         datos[posicion] = x;
     }
 
-    public static int calculaIndiceMin(int[] aAleatorio) {
-        int min = aAleatorio[0];
-        if (aAleatorio.length > 1) {
-            for (int i = 1; i < aAleatorio.length; i++) {
-                if (aAleatorio[i] < min) {
+    public static int calculaIndiceMin(int[] datos) {
+        int min = datos[0];
+        if (datos.length > 1) {
+            for (int i = 1; i < datos.length; i++) {
+                if (datos[i] < min) {
                     min = i;
                 }
             }
@@ -97,6 +97,18 @@ public class UtilidadesArray {
         return min;
     }
 
+     public static float calculaIndiceMin(float[] datos) {
+        float min = datos[0];
+        if (datos.length > 1) {
+            for (int i = 1; i < datos.length; i++) {
+                if (datos[i] < min) {
+                    min = i;
+                }
+            }
+        }
+        return min;
+    }
+    
     //ordena de menor a mayor
     public static void ordenarArrayMenorMayor(int lista[]) {
         //Usamos un bucle anidado

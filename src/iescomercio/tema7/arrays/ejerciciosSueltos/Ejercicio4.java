@@ -26,9 +26,9 @@ public class Ejercicio4 {
 
         for (int i = 0; i < datos.length; i++) {
             aux[i] += UtilidadesArray.calcularMinimo(datos);
-            UtilidadesArray.borrar(datos, UtilidadesArray.calculaIndiceMinimo(datos));
+            UtilidadesArray.borrar(datos, (int) UtilidadesArray.calculaIndiceMin(datos));
         }
-        System.out.println("Indice minimo: "+UtilidadesArray.calculaIndiceMinimo(datos));
+        System.out.println("Indice minimo: "+UtilidadesArray.calculaIndiceMin(datos));
         System.out.println("Array original: " + Arrays.toString(datos));
         System.out.println("Ordenados: " + Arrays.toString(aux));
 
