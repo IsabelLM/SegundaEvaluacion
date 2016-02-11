@@ -10,26 +10,23 @@ package iescomercio.tema7.ahorcado;
  * @author VESPERTINO
  */
 class Horca {
-    private int numeroFallos=0,numeroMaximo=8;
+    private int total, fallos;
 
     public Horca() {
-      
+        this.total = 7;
+        this.fallos = 0;
     }
+    
+    public void mostrar(){
+        System.out.println("Te quedan " +);
+    }
+    
+    public boolean estaVivo(){
+        return !(fallos ==total);
+    }
+    
+   
 
-    public int getNumeroFallos() {
-        return numeroFallos;
-    }
-
-    public void setNumeroFallos(int numeroFallos) {
-        this.numeroFallos = numeroFallos;
-    }
-
-    public int getNumeroMaximo() {
-        return numeroMaximo;
-    }
-
-    public void setNumeroMaximo(int numeroMaximo) {
-        this.numeroMaximo = numeroMaximo;
-    }
+    
     
 }

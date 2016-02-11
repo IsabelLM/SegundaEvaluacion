@@ -18,27 +18,16 @@ public class Ahorcado {
         Ahorcado miAhorcado = new Ahorcado();
         ListaFallos listaFallos = new ListaFallos(null);
 
-        jugador.pedirNombre();
-        palabra.getPalabraEscondida();
-        horca.getNumeroFallos();
-        horca.getNumeroMaximo();
-        listaFallos.getLista();
-        do {
-            jugador.pedirLetra(); //Tengo que limitar la entrada de un solo caracter etc...
-            // palabra.comprobarLetra(jugador.getLetra());
-
-        } while (true);
-
-        //do {            
-        //pedir nombre al Jugador
-        //palabra.mostrar();
-        //horca.mostrar();
-        //lista.mostrar();
-        //jugador.pedirletra(),
-        //if(!Palabra.comprobar){
-        //horca.poner item
-        // lista.metePlabra
-        //}
-        //} while (horca.noEstasMuerto or Palabra.noCompleta);
+        
+        do {            
+        palabra.mostrar();
+        horca.mostrar();
+        lista.mostrar();
+        jugador.pedirletra(),
+        if(!Palabra.comprobar){
+        horca.poner item
+         lista.metePlabra
+        }
+        } while (horca.noEstasMuerto or Palabra.noCompleta);
     }
 }

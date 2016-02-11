@@ -11,53 +11,39 @@ package iescomercio.tema7.ahorcado;
  */
 class Palabra {
 
-    private String palabra, palabraEscondida;
-    private StringBuilder cadenaAux;
+//    private String ;
+    private StringBuilder palabraMostrar, palabraEscondida;
 
     public Palabra(String palabra) {
-        this.palabra = palabra;
-        StringBuilder cadenaAux = new StringBuilder(palabra);
-        for (int i = 0; i < palabra.length(); i++) {
-            cadenaAux.append(' ');
-            cadenaAux.append('-');
+        palabraEscondida = new StringBuilder("Ahorcado");
+        palabraMostrar = new StringBuilder();
+        for (int i = 0; i < palabraEscondida.length(); i++) {
+            palabraMostrar.append("#");
         }
+    }
+
+    public boolean comprueba(char v) {
+        int pos = 0;
+        boolean sw = false;
+        do {
+            pos = palabraEscondida.indexOf(v + "");
+            if (pos != -1) {
+                sw = true;
+                palabraMostrar.replace(pos, pos + 1, v + "");
+                palabraEscondida.replace(pos, pos + 1, "-");
+            }
+        } while (pos != -1);
+        return sw;
+    }
+
+    public boolean noEstaCompleta() {
+        return (palabraMostrar.indexOf("#") != -1);
 
     }
 
-    public String getPalabra() {
-        return palabra;
+    public void mostrar() {
+        System.out.println(palabraMostrar.toString());
+
     }
 
-    public void setPalabra(String palabra) {
-        this.palabra = palabra;
-    }
-
-    public String getPalabraEscondida() {
-        return palabraEscondida;
-    }
-
-    public void setPalabraEscondida(String palabraEscondida) {
-        this.palabraEscondida = palabraEscondida;
-    }
-
-    public boolean comprobarLetra(String s1) {
-        int errores = 0;
-        boolean error;
-        if (palabra.indexOf(s1) == -1) {
-            errores++;
-            error = true;
-        } else {
-            error = false;
-        }
-        return error;
-    }
-
-    public String mostrar() {
-        return cadenaAux.toString();
-    }
-
-    public static void main(String[] args) {
-        Palabra miPala = new Palabra("Isabel");
-        System.out.println(miPala.mostrar());
-    }
 }

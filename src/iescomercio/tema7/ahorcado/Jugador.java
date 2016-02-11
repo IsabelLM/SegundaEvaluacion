@@ -6,6 +6,7 @@
 package iescomercio.tema7.ahorcado;
 
 import iescomercio.utilidades.PedirValores;
+import java.util.Scanner;
 
 /**
  *
@@ -15,33 +16,21 @@ class Jugador {
 
     private String nombre;
     private char letra;
+    private Scanner sc;
 
-    public Jugador(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public char getLetra() {
-        return letra;
-    }
-
-    public void setLetra(char letra) {
-        this.letra = letra;
+    public Jugador() {
+        sc = new Scanner(System.in);
     }
 
     public void pedirNombre() {
-        setNombre(PedirValores.pedirString());
+        System.out.println("Introduce tu nombre: ");
+        nombre = sc.next();
     }
 
-    public void pedirLetra() {
-        char charAt = PedirValores.pedirString().charAt(0);
-        setLetra(charAt);
+    public char dimeLetra() {
+        System.out.println("Dime la letra que quieres probar " + nombre);
+        letra = sc.next().toUpperCase().charAt(0);
+        return letra;
     }
+
 }

@@ -9,16 +9,10 @@ package iescomercio.tema7.ahorcado;
  *
  * @author VESPERTINO
  */
-class ListaFallos {
-     private StringBuilder lista;
+public class Run {
 
-    public ListaFallos() {
-        lista = new StringBuilder();
+    public static void main(String[] args) {
+        Ahorcado miAhorca = new Ahorcado();
+        miAhorca.jugar();
     }
-    public void mostrar(){
-        System.out.println(lista.toString());
-    }
-
-     
-    
 }
