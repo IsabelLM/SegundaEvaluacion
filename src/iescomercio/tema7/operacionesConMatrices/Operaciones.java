@@ -5,45 +5,54 @@
  */
 package iescomercio.tema7.operacionesConMatrices;
 
-import iescomercio.utilidadesArray.UtilidadesArray;
-
 /**
  *
  * @author Isabel
  */
 public class Operaciones {
 
-    private int[][] a;
-    private int[][] b;
-
-    public Operaciones(int[][] a, int[][] b) {
-        this.a = a;
-        this.b = b;
-    }
-
-    public Operaciones() {
-        a = new int[3][3];
-        b = new int[3][3];
-        UtilidadesArray.rellenaArrayConAleatoriosDosI(a, 1, 9);
-        UtilidadesArray.rellenaArrayConAleatoriosDosI(b, 1, 9);
-    }
-
-    public void mostrarA() {
+    public static int[][] suma(int[][] a, int[][] b) {
+        int[][] suma = new int[3][3];
         for (int x = 0; x < a.length; x++) {
-            System.out.print("|");
             for (int y = 0; y < a[x].length; y++) {
-                System.out.print(a[x][y]);
-                if (y != a[x].length - 1) {
-                    System.out.print("\t");
-                }
+                suma[x][y] = a[x][y] + b[x][y];
             }
-            System.out.println("|");
         }
+        return suma;
     }
 
-    @Override
-    public String toString() {
-        return "Ejercicio{" + "a=" + a + ", b=" + b + '}';
+    public static int[][] resta(int[][] a, int[][] b) {
+        int[][] resta = new int[3][3];
+        for (int x = 0; x < a.length; x++) {
+            for (int y = 0; y < a[x].length; y++) {
+                resta[x][y] = a[x][y] - b[x][y];
+            }
+        }
+        return resta;
+    }
+
+    public static int[][] multiplicacion(int[][] a, int[][] b) {
+        int[][] aux = new int[3][3];
+        int[][] aux2 = new int[3][3];
+
+        for (int x = 0; x < a.length; x++) {
+
+            for (int f = 0; f < a.length; f++) {
+                for (int c = 0; c < a[f].length; c++) {
+                    aux[f][c] += a[f][c] * b[c][f];
+                }                
+            }
+        }
+        return aux;
+    }
+
+    public static void mostrar(int[][] array) {
+        for (int x = 0; x < array.length; x++) {
+            for (int y = 0; y < array[x].length; y++) {
+                System.out.print(array[x][y] + "\t");
+            }
+            System.out.println("");
+        }
     }
 
 }

@@ -12,13 +12,22 @@ package iescomercio.tema7.operacionesConMatrices;
 public class Run {
 
     public static void main(String[] args) {
+        int[][] a = {{2, 0, 1}, {3, 0, 0}, {5, 1, 1}};
+        int[][] b = {{1, 0, 1}, {1, 2, 1}, {1, 1, 0}};
+        int[][] aux = new int[3][3];
 
-        Operaciones operaciones = new Operaciones();
+        aux = Operaciones.suma(a, b);
+        Operaciones.mostrar(aux);
 
-        
-        operaciones.mostrarA();
-//        operaciones.sumar();
-//        operaciones.restar();
-//        operaciones.producto();
+        System.out.println("-----------");
+        aux = Operaciones.resta(a, b);
+        Operaciones.mostrar(aux);
+
+        System.out.println("--------");
+
+        aux = Operaciones.multiplicacion(a, b);
+        Operaciones.mostrar(aux);
+
     }
+
 }
