@@ -13,10 +13,12 @@ public class Run {
 
     public static void main(String[] args) {
 
-        Ejercicio operaciones = new Ejercicio();
+        Operaciones operaciones = new Operaciones();
 
-        operaciones.sumar();
-        operaciones.restar();
-        operaciones.producto();
+        
+        operaciones.mostrarA();
+//        operaciones.sumar();
+//        operaciones.restar();
+//        operaciones.producto();
     }
 }

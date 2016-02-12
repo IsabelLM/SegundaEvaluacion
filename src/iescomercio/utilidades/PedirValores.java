@@ -23,6 +23,7 @@ public class PedirValores {
         int integer = i.nextInt();
         return integer;
     }
+    
     //Ambos incluidos
     public static int pedirAleatorioInt(int min,int max){   
         int num=(int) Math.floor(Math.random()*(min-(max+1))+(max+1));

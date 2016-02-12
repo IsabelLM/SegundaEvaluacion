@@ -28,8 +28,24 @@ public class UtilidadesArray {
         }
     }
 
-    //Calcula la media del array
-    public static double calculaMedia(float[] datos) {
+    //Generar numero aleatorio en array multidimensional
+    public static void rellenaArrayConAleatoriosDosF(float[][] datos, float inicio, float fin) {
+        Random r = new Random();
+        for (int i = 0; i < datos.length; i++) {
+            datos[i][i] = (float) Math.floor(Math.random() * (fin - inicio + 1) + inicio);
+        }
+    }
+
+    public static void rellenaArrayConAleatoriosDosI(int[][] datos, int inicio, int fin) {
+        Random r = new Random();
+        for (int i = 0; i < datos.length; i++) {
+            datos[i][i] = (int) Math.floor(Math.random() * (fin - inicio + 1) + inicio);
+        }
+    }
+
+
+//Calcula la media del array
+public static double calculaMedia(float[] datos) {
         double suma = 0;
         for (float i : datos) {
             suma = suma + i;
@@ -97,7 +113,7 @@ public class UtilidadesArray {
         return min;
     }
 
-     public static float calculaIndiceMin(float[] datos) {
+    public static float calculaIndiceMin(float[] datos) {
         float min = datos[0];
         if (datos.length > 1) {
             for (int i = 1; i < datos.length; i++) {
@@ -108,7 +124,7 @@ public class UtilidadesArray {
         }
         return min;
     }
-    
+
     //ordena de menor a mayor
     public static void ordenarArrayMenorMayor(int lista[]) {
         //Usamos un bucle anidado
@@ -147,23 +163,5 @@ public class UtilidadesArray {
 
         return fin;
     }
-
-//Generar numero aleatorio en array multidimensional
-    
-    public static void rellenaArrayConAleatoriosDos(float[][] datos, float inicio, float fin) {
-        Random r = new Random();
-        for (int i = 0; i < datos.length; i++) {
-            datos[i][i] = (float) Math.floor(Math.random() * (fin - inicio + 1) + inicio);
-        }
-    }
-    
-    public static void rellenaArrayConAleatoriosTres(int[][][] datos, float inicio, float fin) {
-        Random r = new Random();
-        for (int i = 0; i < datos.length; i++) {
-            datos[i][i][i] = (int) Math.floor(Math.random() * (fin - inicio + 1) + inicio);
-        }
-   }
-
-   
 
 }
