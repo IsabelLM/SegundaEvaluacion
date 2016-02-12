@@ -21,7 +21,7 @@ public class UtilidadesArray {
         }
     }
 
-    public static void rellenaArrayConAleatorios(int[] datos, int inicio, int fin) {
+    public static void rellenaArrayConAleatoriosInt(int[] datos, int inicio, int fin) {
         Random r = new Random();
         for (int i = 0; i < datos.length; i++) {
             datos[i] = (int) Math.floor(Math.random() * (fin - inicio + 1) + inicio);
@@ -150,11 +150,20 @@ public class UtilidadesArray {
 
 //Generar numero aleatorio en array multidimensional
     
-    public static void rellenaArrayConAleatorios(float[][] datos, float inicio, float fin) {
+    public static void rellenaArrayConAleatoriosDos(float[][] datos, float inicio, float fin) {
         Random r = new Random();
         for (int i = 0; i < datos.length; i++) {
             datos[i][i] = (float) Math.floor(Math.random() * (fin - inicio + 1) + inicio);
         }
     }
+    
+    public static void rellenaArrayConAleatoriosTres(int[][][] datos, float inicio, float fin) {
+        Random r = new Random();
+        for (int i = 0; i < datos.length; i++) {
+            datos[i][i][i] = (int) Math.floor(Math.random() * (fin - inicio + 1) + inicio);
+        }
+   }
+
+   
 
 }

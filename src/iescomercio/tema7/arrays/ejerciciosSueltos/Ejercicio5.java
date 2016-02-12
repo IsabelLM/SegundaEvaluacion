@@ -21,7 +21,7 @@ public class Ejercicio5 {
     public static void main(String[] args) {
         int[] datos = new int[30];
 
-        UtilidadesArray.rellenaArrayConAleatorios(datos, 0, 300);
+        UtilidadesArray.rellenaArrayConAleatoriosInt(datos, 0, 300);
         UtilidadesArray.ordenarArrayMenorMayor(datos);
         System.out.println(Arrays.toString(datos));
     }

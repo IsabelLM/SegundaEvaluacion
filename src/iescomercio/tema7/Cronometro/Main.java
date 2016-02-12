@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iescomercio.tema7.arrays.ejerciciosSueltos.Cronometro;
+package iescomercio.tema7.Cronometro;
 
 import iescomercio.utilidadesArray.UtilidadesArray;
 import java.util.Arrays;
@@ -22,7 +22,7 @@ public class Main {
     public static void main(String[] args) {
         Cronometro miCrono = new Cronometro();
         int[] datos = new int[10000];
-        UtilidadesArray.rellenaArrayConAleatorios(datos, 0, 25000);
+        UtilidadesArray.rellenaArrayConAleatoriosInt(datos, 0, 25000);
         miCrono.start();
         UtilidadesArray.ordenarArrayMenorMayor(datos);
         miCrono.stop();

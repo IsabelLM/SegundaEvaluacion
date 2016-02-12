@@ -11,23 +11,23 @@ package iescomercio.tema7.ahorcado;
  */
 public class Ahorcado {
 
-    public void jugar() {
-        Jugador jugador = new Jugador(null);
-        Palabra palabra = new Palabra(null);
-        Horca horca = new Horca();
-        Ahorcado miAhorcado = new Ahorcado();
-        ListaFallos listaFallos = new ListaFallos(null);
-
-        
-        do {            
-        palabra.mostrar();
-        horca.mostrar();
-        lista.mostrar();
-        jugador.pedirletra(),
-        if(!Palabra.comprobar){
-        horca.poner item
-         lista.metePlabra
-        }
-        } while (horca.noEstasMuerto or Palabra.noCompleta);
-    }
+//    public void jugar() {
+//        Jugador jugador = new Jugador(null);
+//        Palabra palabra = new Palabra(null);
+//        Horca horca = new Horca();
+//        Ahorcado miAhorcado = new Ahorcado();
+//        ListaFallos listaFallos = new ListaFallos(null);
+//
+//        
+//        do {            
+//        palabra.mostrar();
+//        horca.mostrar();
+//        lista.mostrar();
+//        jugador.pedirletra(),
+//        if(!Palabra.comprobar){
+//        horca.poner item
+//         lista.metePlabra
+//        }
+//        } while (horca.noEstasMuerto or Palabra.noCompleta);
+//    }
 }

@@ -11,8 +11,8 @@ package iescomercio.tema7.ahorcado;
  */
 public class Run {
 
-    public static void main(String[] args) {
-        Ahorcado miAhorca = new Ahorcado();
-        miAhorca.jugar();
-    }
+//    public static void main(String[] args) {
+//        Ahorcado miAhorca = new Ahorcado();
+//        miAhorca.jugar();
+//    }
 }

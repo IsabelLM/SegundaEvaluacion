@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package iescomercio.tema7.arrays.ejerciciosSueltos.Cronometro;
+package iescomercio.tema7.Cronometro;
 
 /**
  *

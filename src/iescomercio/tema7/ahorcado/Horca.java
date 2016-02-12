@@ -10,20 +10,20 @@ package iescomercio.tema7.ahorcado;
  * @author VESPERTINO
  */
 class Horca {
-    private int total, fallos;
-
-    public Horca() {
-        this.total = 7;
-        this.fallos = 0;
-    }
-    
-    public void mostrar(){
-        System.out.println("Te quedan " +);
-    }
-    
-    public boolean estaVivo(){
-        return !(fallos ==total);
-    }
+//    private int total, fallos;
+//
+//    public Horca() {
+//        this.total = 7;
+//        this.fallos = 0;
+//    }
+//    
+//    public void mostrar(){
+//        System.out.println("Te quedan " +);
+//    }
+//    
+//    public boolean estaVivo(){
+//        return !(fallos ==total);
+//    }
     
    
 
