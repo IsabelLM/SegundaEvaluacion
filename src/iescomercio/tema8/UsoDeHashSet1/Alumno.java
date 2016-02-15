@@ -5,6 +5,8 @@
  */
 package iescomercio.tema8.UsoDeHashSet1;
 
+import java.util.Objects;
+
 /**
  *
  * @author VESPERTINO
@@ -79,6 +81,35 @@ public class Alumno {
     public String toString() {
         return " Nombre: " + nombre +  " Apellidos: " + apellidos + " Telefono: " + numeroDeTelefono;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Alumno other = (Alumno) obj;
+        if (this.numeroDeExpediente != other.numeroDeExpediente) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.apellidos, other.apellidos)) {
+            return false;
+        }
+        return true;
+    }
+
+    
     
     
 }

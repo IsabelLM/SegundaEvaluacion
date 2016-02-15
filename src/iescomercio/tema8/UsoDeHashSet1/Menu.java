@@ -14,9 +14,16 @@ import java.util.Scanner;
  * @author VESPERTINO
  */
 public class Menu {
-    Scanner sc = new Scanner(System.in);
-    HashSet alumnos = new HashSet();
 
+    private Scanner sc; ;
+    private HashSet alumnos;
+//    Iterator it = alumnos.iterator();
+
+    public Menu() {
+        sc = new Scanner(System.in);
+        alumnos = new HashSet();
+    }
+  
     public void mostrarMenu() {
         System.out.println("\n 1. Añadir datos alumno \n 2. Borrar por posicion"
                 + " \n 3. Mostrar listado \n 4. Salir del programa");
@@ -33,8 +40,7 @@ public class Menu {
                 System.out.println("El alumno ha sido eliminado.");
                 break;
             case 3:
-                mostrar();
-                break;
+                mostrar();                
         }
     }
 
@@ -46,24 +52,34 @@ public class Menu {
         alum.setApellidos(sc.next());
         System.out.print("Introduce el telefono del alumno: ");
         alum.setNumeroDeTelefono(sc.nextInt());
-        alumnos.add(alum);
+        if (alumnos.add(alum)==false) 
+            System.out.println("El alumno ya esta introducido");
     }
 
     private void borrar() {
+        Iterator it = alumnos.iterator();
         int numero, count = 0;
+
         System.out.println("¿Qué elemento quieres borrar?");
         numero = sc.nextInt();
+
         //Numero marca en qué posición está el elemento a eliminar. Se copia el resto de elementos a otro.
-        do {
-            
-        } while (count != numero);
+        while (it.hasNext()) {
+            if (count == numero) {
+                alumnos.remove(it.next());
+                break;
+            }
+            count++;
+        }
     }
 
     private void mostrar() {
         Iterator it = alumnos.iterator();
-        int count = 1;
+        int count = 0;
+        Alumno aux;
         while (it.hasNext()) {
-            System.out.println(count + ".-" + it.next());
+            aux = (Alumno)it.next();
+            System.out.println(count + ".-" + aux.toString());
             count++;
         }
     }
