@@ -77,7 +77,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" + "numeroDeTelefono=" + numeroDeTelefono + ", nombre=" + nombre + ", apellidos=" + apellidos + '}';
+        return " Nombre: " + nombre +  " Apellidos: " + apellidos + " Telefono: " + numeroDeTelefono;
     }
     
     

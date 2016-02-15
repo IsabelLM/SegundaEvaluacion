@@ -14,6 +14,8 @@ import java.util.Scanner;
  * @author VESPERTINO
  */
 public class Menu {
+    Scanner sc = new Scanner(System.in);
+    HashSet alumnos = new HashSet();
 
     public void mostrarMenu() {
         System.out.println("\n 1. Añadir datos alumno \n 2. Borrar por posicion"
@@ -24,37 +26,45 @@ public class Menu {
         switch (x) {
             case 1:
                 ingresar();
+                System.out.println("El alumno ha sido añadido.");
+                break;
             case 2:
                 borrar();
+                System.out.println("El alumno ha sido eliminado.");
+                break;
             case 3:
                 mostrar();
+                break;
         }
     }
 
     private void ingresar() {
         Alumno alum = new Alumno();
-        HashSet alumnos = new HashSet();
-        Scanner sc = new Scanner(System.in);
-        
         System.out.print("Introduce el nombre del alumno: ");
         alum.setNombre(sc.next());
         System.out.print("Introduce el apellido del alumno: ");
         alum.setApellidos(sc.next());
         System.out.print("Introduce el telefono del alumno: ");
         alum.setNumeroDeTelefono(sc.nextInt());
-
         alumnos.add(alum);
     }
 
     private void borrar() {
-
+        int numero, count = 0;
+        System.out.println("¿Qué elemento quieres borrar?");
+        numero = sc.nextInt();
+        //Numero marca en qué posición está el elemento a eliminar. Se copia el resto de elementos a otro.
+        do {
+            
+        } while (count != numero);
     }
 
     private void mostrar() {
-
-    }
-
-    public void salir() {
-
+        Iterator it = alumnos.iterator();
+        int count = 1;
+        while (it.hasNext()) {
+            System.out.println(count + ".-" + it.next());
+            count++;
+        }
     }
 }

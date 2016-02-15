@@ -18,11 +18,15 @@ public class Run {
         do {
             miMenu.mostrarMenu();
             x = miUsuario.pedirOpcion();
+
+            if (x < 1 || x > 4) {
+                System.out.println("Introduce una opción valida.");
+            }
+
             if (x != 4) {
                 miMenu.ejecutaOpcion(x);
+                System.out.println("________________________");
             }
         } while (x != 4);
-
     }
-
 }

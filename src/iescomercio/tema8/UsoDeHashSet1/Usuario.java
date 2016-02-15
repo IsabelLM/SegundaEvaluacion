@@ -23,7 +23,7 @@ public class Usuario {
     
     public int  pedirOpcion(){
         int x = 0;
-        System.out.println("Introduce la opción que quieras:");
+        System.out.println(nombre +", introduce la opción que quieras:");
         x = sc.nextInt();
         return x;
     }
