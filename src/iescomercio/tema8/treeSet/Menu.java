@@ -5,9 +5,9 @@
  */
 package iescomercio.tema8.treeSet;
 
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 /**
  *
@@ -17,14 +17,21 @@ public class Menu {
 
     private Scanner sc;
     private ListaAlumnos lista;
-    private HashSet alumnos;
+    private TreeSet alumnos;
 //    Iterator it = alumnos.iterator();
     private Alumno Alumno;
 
     public Menu() {
         sc = new Scanner(System.in);
-        alumnos = new HashSet();
+        alumnos = new TreeSet();
         lista = new ListaAlumnos();
+    }
+
+    public int pedirOpcion() {
+        int x = 0;
+        System.out.println("Introduce la opción que quieras:");
+        x = sc.nextInt();
+        return x;
     }
 
     public void mostrarMenu() {
@@ -56,7 +63,7 @@ public class Menu {
             case 6:
                 lista.muestraPorNombre();
                 break;
-            case 7: 
+            case 7:
                 lista.muestraPorNota();
                 break;
 
@@ -71,7 +78,7 @@ public class Menu {
         alum.setNota(sc.nextInt());
         System.out.print("Introduce el telefono del alumno: ");
         alum.setTelefono(sc.nextLong());
-        System.out.print("Introduce el numeor de expediente del alumno: ");
+        System.out.print("Introduce el numero de expediente del alumno: ");
         alum.setnExpediente(sc.nextInt());
         if (alumnos.add(alum) == false) {
             System.out.println("El alumno ya esta introducido");
@@ -81,14 +88,15 @@ public class Menu {
     private void borrar() {
         Iterator it = alumnos.iterator();
         int numero, count = 0;
-
+        Alumno aux;
         System.out.println("¿Qué elemento quieres borrar?");
         numero = sc.nextInt();
 
         //Numero marca en qué posición está el elemento a eliminar. Se copia el resto de elementos a otro.
         while (it.hasNext()) {
+            aux = (Alumno) it.next();
             if (count == numero) {
-                alumnos.remove(it.next());
+                alumnos.remove(aux);
                 break;
             }
             count++;

@@ -66,7 +66,7 @@ public class Alumno implements Comparable {
 
     @Override
     public String toString() {
-        return "nExpediente=" + nExpediente + " nombre=" + nombre + ", nota=" + nota + ", telefono=" + telefono + '}';
+        return "nExpediente: " + nExpediente + " Nombre:" + nombre + " Nota:" + nota + " Telefono:" + telefono;
     }
 
     @Override
