@@ -28,9 +28,11 @@ public class Menu {
     }
        
     public void mostrartMenu(){
-         System.out.println("\n 1. Añadir datos alumno \n 2. Mostrar ordenacion FIFO "
-                + " \n 3. Mostrar ordenacion LIFO  \n 4. Sacar el objeto correspondiente de la lista \n 5. Enseñar el objeto ultimo incorporado "
-                 +"\n 6. Numero de elemntos de la listas \n 7. Salir");
+         System.out.println("\n 1. Añadir alumno \n 2. Mostrar ordenacin FIFO "
+                + " \n 3. Mostrar ordenacion LIFO  "
+                 + "\n 4. Sacar el objeto correspondiente de la lista "
+                 + "\n 5. Enseñar el objeto ultimo incorporado "
+                 +"\n 6. Numero de elementos de la lista \n 7. Salir");
     }
 
     public void ejecutarOpcion(){

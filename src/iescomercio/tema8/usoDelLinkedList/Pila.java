@@ -68,12 +68,10 @@ public class Pila {
     }
 
     public Object cima() {
-        //System.out.println( "Pimer elemento de la cola"+list.getLast());
         return pila.getFirst();
     }
 
     public int size() {
-        //System.out.println("La cantidad de elementos son: "+list.size());
         return pila.size();
     }
 }
