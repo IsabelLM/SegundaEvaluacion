@@ -6,6 +6,7 @@
  */
 package iescomercio.tema8.usoDelLinkedList;
 
+import iescomercio.utilidades.UtilidadesLista;
 import java.util.LinkedList;
 
 /**
@@ -26,41 +27,61 @@ public class Cola {
         this.cola = new LinkedList();
     }
 
-    public boolean estaLlena() {
-        if (tamañoMax == cola.size()) {
-            return true;
+     public LinkedList getList() {
+        return cola;
+    }
+
+    public void setList(LinkedList list) {
+        this.cola = list;
+    }
+    
+    public boolean estaLlena(){
+        boolean respuesta=false;
+        if(tamañoMax>0){
+            if(tamañoMax==cola.size()){
+                System.out.println("La lista esta llena");
+                respuesta=true;
+            }
         }
-        return false;
+       return respuesta;
     }
-
-    public boolean estaVacia() {
-        if (cola.isEmpty()) {
-            return true;
+    
+    public boolean estaVacia(){
+        boolean respuesta=false;
+        if(cola.size()==0){
+            System.out.println("La lista esta vacia");
+            respuesta=true;
         }
-        return false;
+       return respuesta;
     }
-
-    public Object pop() {
-        if (estaVacia()) {
-            return null;
-        } else {
-            return cola.pollFirst();
+    
+    public boolean push(Object obj){
+        boolean resultado=false;
+        if(!estaLlena()){
+           cola.addLast(obj); 
+           resultado=true;
+        }else{
+            resultado=false;
         }
+       return resultado;
     }
-
-    public void push(Object o) {
-        cola.addLast(o);
+    
+    public Object pop(){        
+        return cola.removeLast();
     }
-
-    public Object imprimir() {
-        return cola.toArray();
+    
+    public void imprimir(){
+        
+        UtilidadesLista.showLista(cola);
     }
-
-    public Object cima() {
-        return cola.peek();
+    
+    public Object cima(){
+        //System.out.println( "Pimer elemento de la cola"+list.getFirst());
+        return cola.getLast();
     }
-
-    public int size() {
+    
+    public int  size(){
+       // System.out.println("La cantidad de elementos son: "+list.size());
         return cola.size();
     }
 }

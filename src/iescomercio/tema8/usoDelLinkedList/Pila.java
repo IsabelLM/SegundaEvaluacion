@@ -5,6 +5,7 @@
  */
 package iescomercio.tema8.usoDelLinkedList;
 
+import iescomercio.utilidades.UtilidadesLista;
 import java.util.LinkedList;
 
 /**
@@ -27,40 +28,52 @@ public class Pila {
     }
 
     public boolean estaLlena() {
-        if (tamañoMax == pila.size()) {
-            return true;
+        boolean respuesta = false;
+        if (tamañoMax > 0) {
+            if (tamañoMax == pila.size()) {
+                System.out.println("La lista esta llena");
+                respuesta = true;
+            }
         }
-        return false;
+        return respuesta;
     }
 
     public boolean estaVacia() {
-        if (pila.isEmpty()) {
-            return true;
+        boolean respuesta = false;
+        if (pila.size() == 0) {
+            System.out.println("La lista esta vacia");
+            respuesta = true;
         }
-        return false;
+        return respuesta;
+    }
+
+    public boolean push(Object obj) {
+        boolean resultado = false;
+        if (!estaLlena()) {
+            pila.addFirst(obj);
+            resultado = true;
+        } else {
+            resultado = false;
+        }
+        return resultado;
     }
 
     public Object pop() {
-        if (estaVacia()) {
-            return null;
-        } else {
-            return pila.pollLast();
-        }
+        return pila.removeFirst();
     }
 
-    public void push(Object o) {
-        pila.addFirst(o);
-    }
+    public void imprimir() {
 
-    public Object imprimir() {
-        return pila.toArray();
+        UtilidadesLista.showLista(pila);
     }
 
     public Object cima() {
-        return pila.peekLast();
+        //System.out.println( "Pimer elemento de la cola"+list.getLast());
+        return pila.getFirst();
     }
 
     public int size() {
+        //System.out.println("La cantidad de elementos son: "+list.size());
         return pila.size();
     }
 }

@@ -56,7 +56,15 @@ public class Acciones {
         cola.imprimir();
     }
 
-    public void imprimirLista() {
+    public void imprimirPila() {
         pila.imprimir();
+    }
+
+    public Cola colaPasar() {
+        return cola;
+    }
+
+    public Pila pilaPasar() {
+        return pila;
     }
 }
