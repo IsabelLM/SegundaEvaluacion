@@ -21,36 +21,38 @@ public class Carpeta {
         this.NombreCarpeta = NombreCarpeta;
     }
 
+    public String getNombreCarpeta() {
+        return NombreCarpeta;
+    }
+
+    public void setNombreCarpeta(String NombreCarpeta) {
+        this.NombreCarpeta = NombreCarpeta;
+    }
+
+    public ArrayList<Apunte> getList() {
+        return list;
+    }
+
+    public void setList(ArrayList<Apunte> list) {
+        this.list = list;
+    }
+
+        
     public void añadirNota(Apunte ap) {
         list.add(ap);
-
     }
 
     public void borrarNota(Apunte ap) {
         list.remove(list.indexOf(ap));
     }
 
-    public void ver(Apunte ap) {
-        Apunte aux = new Apunte();
-        int indice = 0;
-
-        do {
-            indice ++;
-        } while (!ap.equals(aux));
-        if(ap.equals(aux)){
-            
-        }
+    public void ver(String ap) {
+        Apunte aux=new Apunte(ap.toUpperCase(), "");
+        list.get(list.indexOf(aux)).toString();
     }
 
     public void modificar(Apunte original, Apunte nuevo) {
         list.add(list.indexOf(original), nuevo);
     }
-
-    public void listadoHoras() {
-
-    }
-
-    public void listadoFecha() {
-
-    }
+   
 }

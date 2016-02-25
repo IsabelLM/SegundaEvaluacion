@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.iescomercio.menu;
+package iescomercio.menu;
 
 /**
  *
@@ -18,6 +18,10 @@ public class OpcionesMenu {
     }
     public void salir() {
         System.out.println("salir apunte");
+    }
+    
+    public void añadirCarpeta(){
+        System.out.println("Añadir una carpeta al archivador");
     }
     
 }

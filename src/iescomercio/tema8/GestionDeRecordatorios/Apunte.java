@@ -15,17 +15,15 @@ import java.util.Objects;
 public class Apunte {
 
     private String asunto, texto;
-    private GregorianCalendar fechaHora;
+    private GregorianCalendar fecha;
 
     public Apunte() {
     }
 
-    
-    
-    public Apunte(String asunto, String texto, int year, int month, int dayOfMonth, int hourOfDay, int minute) {
+    public Apunte(String asunto, String texto) {
         this.asunto = asunto;
         this.texto = texto;
-        this.fechaHora = new GregorianCalendar(year, month, dayOfMonth, hourOfDay, minute);
+        this.fecha = new GregorianCalendar();
     }
 
     public String getAsunto() {
@@ -44,19 +42,19 @@ public class Apunte {
         this.texto = texto;
     }
 
-    public GregorianCalendar getFechaHora() {
-        return fechaHora;
-    }
-
-    public void setFechaHora(GregorianCalendar fechaHora) {
-        this.fechaHora = fechaHora;
-    }
-
     @Override
     public String toString() {
-        return "Asunto: " + asunto + " Texto: " + texto + " fechaHora: " + fechaHora ;
+        return "Asunto: " + asunto + " Texto: " + texto + " Fecha: " + fecha;
     }
 
+    public GregorianCalendar getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(GregorianCalendar fecha) {
+        this.fecha = fecha;
+    }
+        
     @Override
     public int hashCode() {
         int hash = 5;
@@ -78,19 +76,5 @@ public class Apunte {
         }
         return true;
     }
-
-
-    
-    
-    
-    public static void main(String[] args) {
-        Apunte a = new Apunte("Lala", "Lala", 2005, 7, 1, 12, 13);
-        
-        System.out.println(a.getFechaHora());
-    }
-
-
-
-    
 
 }
