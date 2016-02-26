@@ -46,6 +46,13 @@ public class Carpeta {
         list.remove(list.indexOf(ap));
     }
 
+    
+    public void comprobarApunte(Apunte ap){
+        if(list.lastIndexOf(ap) != -1){
+            
+        }
+    }
+    
     public void ver(String ap) {
         Apunte aux=new Apunte(ap.toUpperCase(), "");
         list.get(list.indexOf(aux)).toString();

@@ -20,6 +20,11 @@ public class Apunte {
     public Apunte() {
     }
 
+    public Apunte(String asunto) {
+        this.asunto = asunto;
+        this.fecha = new GregorianCalendar();
+    }
+
     public Apunte(String asunto, String texto) {
         this.asunto = asunto;
         this.texto = texto;
@@ -54,7 +59,7 @@ public class Apunte {
     public void setFecha(GregorianCalendar fecha) {
         this.fecha = fecha;
     }
-        
+
     @Override
     public int hashCode() {
         int hash = 5;

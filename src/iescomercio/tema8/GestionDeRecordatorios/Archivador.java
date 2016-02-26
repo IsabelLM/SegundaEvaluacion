@@ -42,6 +42,14 @@ public class Archivador {
         archiv.add(carp);
     }
 
+    public void comprobarCarpeta(Carpeta carp) {
+        if (archiv.indexOf(carp) == -1) {
+            System.out.println("La carpeta no existe.");
+        } else {
+            archiv.indexOf(carp);
+        }
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;

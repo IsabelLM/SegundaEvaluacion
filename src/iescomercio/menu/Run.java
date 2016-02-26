@@ -17,9 +17,9 @@ public class Run {
         OpcionesMenu op = new OpcionesMenu();
         
         // Añadimos las opciones 
-        menu.addOpcionMenu("Añadir Apunte", () -> op.añadir());
-	menu.addOpcionMenu("Borrar Apunte", () -> op.borrar());
-        menu.addOpcionMenu("Salir del Menu", () -> op.salir());
+//        menu.addOpcionMenu("Añadir Apunte", () -> op.añadir());
+//	menu.addOpcionMenu("Borrar Apunte", () -> op.borrar());
+//        menu.addOpcionMenu("Salir del Menu", () -> op.salir());
         
         // Mostrar menu
         menu.mostrarMenu();
