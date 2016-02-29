@@ -5,6 +5,7 @@
  */
 package iescomercio.tema8.GestionDeRecordatorios;
 
+import iescomercio.utilidades.UtilidadesLista;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -48,6 +49,10 @@ public class Archivador {
         } else {
             archiv.indexOf(carp);
         }
+    }
+
+     public void showsCarpetas(){
+        UtilidadesLista.showLista(archiv);
     }
 
     @Override

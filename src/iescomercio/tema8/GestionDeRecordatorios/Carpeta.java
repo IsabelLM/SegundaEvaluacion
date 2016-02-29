@@ -5,6 +5,7 @@
  */
 package iescomercio.tema8.GestionDeRecordatorios;
 
+import iescomercio.utilidades.UtilidadesLista;
 import java.util.ArrayList;
 
 /**
@@ -37,7 +38,6 @@ public class Carpeta {
         this.list = list;
     }
 
-        
     public void añadirNota(Apunte ap) {
         list.add(ap);
     }
@@ -46,20 +46,27 @@ public class Carpeta {
         list.remove(list.indexOf(ap));
     }
 
-    
-    public void comprobarApunte(Apunte ap){
-        if(list.lastIndexOf(ap) != -1){
-            
+    public void comprobarApunte(Apunte ap) {
+        if (list.lastIndexOf(ap) != -1) {
+
         }
     }
-    
+
+    public void mostrarApunte(String st1) {
+        Apunte aux = new Apunte(st1.toUpperCase(), "");
+        System.out.println(list.get(list.indexOf(aux)).toString());
+    }
+
+    public void mostrarApuntes(){
+        UtilidadesLista.showLista(list);
+    }
     public void ver(String ap) {
-        Apunte aux=new Apunte(ap.toUpperCase(), "");
+        Apunte aux = new Apunte(ap.toUpperCase(), "");
         list.get(list.indexOf(aux)).toString();
     }
 
     public void modificar(Apunte original, Apunte nuevo) {
         list.add(list.indexOf(original), nuevo);
     }
-   
+
 }
