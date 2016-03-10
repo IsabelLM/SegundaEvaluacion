@@ -7,6 +7,7 @@ package iescomercio.tema8.GestionDeRecordatorios;
 
 import iescomercio.utilidades.UtilidadesLista;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Objects;
 
 /**
@@ -24,6 +25,10 @@ public class Archivador {
     }
 
     public ArrayList<Carpeta> getArchiv() {
+        for (Iterator<Carpeta> iterator = archiv.iterator(); iterator.hasNext();) {
+            Carpeta next = iterator.next();
+            
+        }
         return archiv;
     }
 

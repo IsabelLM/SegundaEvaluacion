@@ -19,7 +19,7 @@ public class AlumnoOrdenadoPorNota implements Comparator {
         Alumno a2 = (Alumno) o2;
         int aux;
 
-        aux = a2.getNota() - a1.getNota();
+        aux = a1.getNota() - a2.getNota();
         return aux;
 
     }
